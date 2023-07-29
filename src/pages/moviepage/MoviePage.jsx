@@ -3,9 +3,10 @@ import { useParams } from "react-router-dom";
 import { getMovieById } from "../../utils/api";
 import BackgroundImage from "../../components/backgroundImage/BackgroundImage";
 import MoviePageCard from "../../components/moviepagecard/MoviePageCard";
+import SchimmerForMoviePage from "../../components/schimmer/SchimmerForMoviePage";
 
 export default function MoviePage() {
-  const [movieDetail, setMovieDetail] = useState();
+  const [movieDetail, setMovieDetail] = useState([]);
   const { id } = useParams();
 
   console.log(movieDetail);
@@ -13,7 +14,9 @@ export default function MoviePage() {
   const getMoviesById = () => {
     getMovieById("movie/", id)
       .then((result) => {
-        setMovieDetail(result);
+        setTimeout(() => {
+          setMovieDetail(result);
+        }, 1000);
       })
       .catch((err) => {
         console.log(err);
@@ -26,8 +29,14 @@ export default function MoviePage() {
 
   return (
     <main>
-      <MoviePageCard {...movieDetail} />
-      <BackgroundImage {...movieDetail} />
+      {movieDetail.length === 0 ? (
+        <SchimmerForMoviePage />
+      ) : (
+        <>
+          <MoviePageCard {...movieDetail} />
+          <BackgroundImage {...movieDetail} />
+        </>
+      )}
     </main>
   );
 }
