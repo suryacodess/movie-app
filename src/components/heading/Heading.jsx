@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Heading({ title }) {
+export default function Heading({ title, font }) {
   return (
     <section className="w-full pb-5">
       <div className="max-w-[1200px] w-full mx-auto">

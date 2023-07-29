@@ -16,3 +16,9 @@ export const getMovies = async (url) => {
   const json = await fetchData.json();
   return json;
 };
+
+export const getMovieById = async (url, id) => {
+  const fetchData = await fetch(baseUrl + url + id, options);
+  const json = await fetchData.json();
+  return json;
+};
