@@ -9,7 +9,7 @@ export default function MoviePageCard(props) {
   let releaseData = dayjs(release_date).format("DD/MM/YYYY");
 
   return (
-    <section className="movie-details w-full mt-10 h-96 flex justify-center items-center">
+    <section className="movie-details w-full h-96 flex justify-center items-center">
       <div className="movie-details-inner flex justify-between max-w-[1200px] w-full mx-auto">
         <div className="img max-w-[20%] w-full">
           <img src={poster_url + poster_path} alt={title} />

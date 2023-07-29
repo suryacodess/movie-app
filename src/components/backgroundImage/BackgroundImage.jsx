@@ -5,7 +5,7 @@ import { backgroubd_poster_url } from "../../utils/constants";
 
 export default function BackgroundImage({ backdrop_path, title }) {
   return (
-    <section className="background-image w-full h-[80vh]">
+    <section className="background-image w-full h-[80vh] mt-10">
       <div className="img max-w-[1200px] w-full mx-auto">
         <img
           className="w-[1200px] h-full "

@@ -11,7 +11,7 @@ export default function MovieCard(props) {
       <div className="moviecard max-w-[250px] w-full ">
         <div className="img">
           <img
-            className="w-full rounded-md"
+            className="w-full h-64 rounded-md"
             src={poster_url + poster_path}
             alt={title}
           />
