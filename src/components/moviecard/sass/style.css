@@ -1,0 +1,16 @@
+.moviecard .img {
+  position: relative;
+}
+.moviecard .img .vote-average {
+  bottom: -10px;
+  left: 5px;
+  position: absolute;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
