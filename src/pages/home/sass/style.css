@@ -11,7 +11,7 @@
 }
 .popular-movies .popular-movies-inner .swiper .swiper-button-prev::after,
 .popular-movies .popular-movies-inner .swiper .swiper-button-next::after {
-  font-size: 20px;
+  font-size: 16px;
   color: #000;
   font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

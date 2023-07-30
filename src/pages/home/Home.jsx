@@ -40,7 +40,7 @@ export default function Home() {
       {popularMovies.length === 0 ? (
         <Schimmer />
       ) : (
-        <section className="popular-movies w-full px-5 mt-10">
+        <section className="popular-movies w-full px-5 mt-10 pb-14">
           <Heading title="Popular Movies" />
           <div className="popular-movies-inner  max-w-[1200px] w-full mx-auto ">
             <Swiper
@@ -48,8 +48,7 @@ export default function Home() {
               spaceBetween={20}
               slidesPerView={6}
               grabCursor={true}
-              scrollbar={{ draggable: true }}
-              modules={[Pagination, Navigation, Scrollbar, FreeMode]}
+              modules={[Navigation, Scrollbar, FreeMode]}
               navigation={true}
               breakpoints={{
                 1280: {

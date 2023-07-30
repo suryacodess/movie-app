@@ -7,6 +7,8 @@ import People from "./pages/people/People";
 import More from "./pages/more/More";
 import Error from "./pages/error/Error";
 import MoviePage from "./pages/moviepage/MoviePage";
+import Cast from "./pages/cast/Cast";
+import Crew from "./pages/crew/Crew";
 
 function App() {
   return (
@@ -20,6 +22,11 @@ function App() {
           <Route path="/more" element={<More />} />
           <Route path="*" element={<Error />} />
           <Route path="/movie/:id" element={<MoviePage />} />
+          <Route path="/cast/:id" element={<Cast />} />
+          <Route path="/cast/:id/movie/:id" element={<MoviePage />} />
+          <Route path="/crew/:id" element={<Crew />} />
+          <Route path="/crew/:id/movie/:id" element={<MoviePage />} />
+
         </Routes>
       </BrowserRouter>
     </>

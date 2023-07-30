@@ -22,3 +22,10 @@ export const getMovieById = async (url, id) => {
   const json = await fetchData.json();
   return json;
 };
+
+export const getMovieCreditsById = async (url) => {
+  const fetchData = await fetch(baseUrl + url, options);
+  const json = await fetchData.json();
+  return json;
+};
+
