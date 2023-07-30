@@ -57,7 +57,7 @@ export default function Crew() {
           {movieCreditsCrew.map((crew) => {
             return (
               <div
-                key={crew?.id}
+                key={Math.random()}
                 className="w-full flex flex-col justify-center items-center"
               >
                 <div className="img w-full h-[100px]">

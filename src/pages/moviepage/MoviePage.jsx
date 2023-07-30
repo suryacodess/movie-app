@@ -13,6 +13,7 @@ export default function MoviePage() {
 
   const { id } = useParams();
 
+  // movie detail api
   const getMoviesById = () => {
     getMovieById("movie/", id)
       .then((result) => {
@@ -25,10 +26,13 @@ export default function MoviePage() {
       });
   };
 
+  // movie credits details api
   const getMoviesCreditsById = () => {
     getMovieCreditsById(`movie/${id}/credits`).then((res) => {
       try {
+        // movie cast list
         setMovieCreditsCast(res.cast);
+        // movie crew list
         setMovieCreditsCrew(res.crew);
       } catch (error) {
         console.log(error);
@@ -52,12 +56,17 @@ export default function MoviePage() {
         </>
       )}
 
+      {/* movie credits */}
       <section className="mt-7 min-h-[40vh] px-5 w-full pt-10 pb-10">
         <div className="max-w-[1200px] mx-auto ">
           <h1 className="text-2xl md:text-3xl font-bold">Movie Credits</h1>
+
+          {/* movie cast list */}
           <div className="py-5 flex items-center justify-between">
             <div>
-              <h2 className="text-2xl font-bold">Cast</h2>
+              <h2 className="text-2xl font-bold">
+                Cast ({movieCreditsCast.length})
+              </h2>
             </div>
             <nav>
               <Link to={"/cast/" + id} className="underline">
@@ -65,14 +74,14 @@ export default function MoviePage() {
               </Link>
             </nav>
           </div>
-          <div className="movie-credits w-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-5">
+          <div className="movie-credits w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-5">
             {movieCreditsCast.slice(0, 12).map((cast) => {
               return (
                 <div
                   className="max-w-[200px] w-full flex flex-col justify-start"
                   key={cast.id}
                 >
-                  <div className="img">
+                  <div className="img w-full flex justify-center">
                     <img
                       className="w-[100px] h-[100px] object-cover rounded-full"
                       src={
@@ -91,24 +100,29 @@ export default function MoviePage() {
               );
             })}
           </div>
-          <div className="flex justify-between items-center mt-10 py-5">
+          {/* movie cast list section ends here */}
+
+          {/* movie crew list */}
+          <section className="flex justify-between items-center mt-10 py-5">
             <div>
-              <h2 className="text-2xl font-bold">Crew</h2>
+              <h2 className="text-2xl font-bold">
+                Crew ({movieCreditsCrew.length})
+              </h2>
             </div>
             <nav>
               <Link to={"/crew/" + id} className="underline">
                 View All
               </Link>
             </nav>
-          </div>
-          <div className="movie-credits w-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-5">
+          </section>
+          <section className="movie-credits w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-5">
             {movieCreditsCrew.slice(0, 5).map((crew) => {
               return (
                 <div
                   className="max-w-[200px] w-full flex flex-col justify-start"
                   key={Math.random()}
                 >
-                  <div className="img">
+                  <div className="img w-full flex justify-center">
                     <img
                       className="w-[100px] h-[100px] object-cover rounded-full"
                       src={
@@ -121,14 +135,16 @@ export default function MoviePage() {
                   </div>
                   <div className="description text-center">
                     <p className="font-bold text-sm">{crew?.name}</p>
-                    <p className="text-xs">{crew?.job}</p>
+                    <p className="text-xs italic">{crew?.job}</p>
                   </div>
                 </div>
               );
             })}
-          </div>
+          </section>
+          {/* movie crew list section ends here */}
         </div>
       </section>
+      {/* movie credits section ends here */}
     </main>
   );
 }
