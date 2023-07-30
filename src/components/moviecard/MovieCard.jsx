@@ -2,9 +2,12 @@ import React from "react";
 import { poster_url } from "../../utils/constants";
 import "./sass/style.css";
 import { Link } from "react-router-dom";
+import dayjs from "dayjs";
 
 export default function MovieCard(props) {
   const { id, poster_path, title, release_date, vote_average } = props;
+
+  const releaseDate = dayjs(release_date).format("DD/MM/YYYY");
 
   return (
     <Link to={"/movie/" + id}>
@@ -19,7 +22,7 @@ export default function MovieCard(props) {
         </div>
         <div className="description pt-6">
           <h1 className="text-sm font-bold">{title}</h1>
-          <small>{release_date}</small>
+          <small>{releaseDate}</small>
         </div>
       </div>
     </Link>

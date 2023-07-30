@@ -1,0 +1,17 @@
+.popular-movies .popular-movies-inner {
+  position: relative;
+}
+.popular-movies .popular-movies-inner .swiper .swiper-button-prev,
+.popular-movies .popular-movies-inner .swiper .swiper-button-next {
+  background: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+}
+.popular-movies .popular-movies-inner .swiper .swiper-button-prev::after,
+.popular-movies .popular-movies-inner .swiper .swiper-button-next::after {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
