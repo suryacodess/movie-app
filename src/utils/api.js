@@ -29,3 +29,8 @@ export const getMovieCreditsById = async (url) => {
   return json;
 };
 
+export const getTopRatedMovies = async (url) => {
+  const fetchData = await fetch(baseUrl + url, options);
+  const json = await fetchData.json();
+  return json;
+};

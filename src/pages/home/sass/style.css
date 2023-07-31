@@ -1,8 +1,11 @@
-.popular-movies .popular-movies-inner {
+.popular-movies .popular-movies-inner, .popular-movies .top-rated-movies-inner, .top-rated-movies .popular-movies-inner, .top-rated-movies .top-rated-movies-inner {
   position: relative;
 }
 .popular-movies .popular-movies-inner .swiper .swiper-button-prev,
-.popular-movies .popular-movies-inner .swiper .swiper-button-next {
+.popular-movies .popular-movies-inner .swiper .swiper-button-next, .popular-movies .top-rated-movies-inner .swiper .swiper-button-prev,
+.popular-movies .top-rated-movies-inner .swiper .swiper-button-next, .top-rated-movies .popular-movies-inner .swiper .swiper-button-prev,
+.top-rated-movies .popular-movies-inner .swiper .swiper-button-next, .top-rated-movies .top-rated-movies-inner .swiper .swiper-button-prev,
+.top-rated-movies .top-rated-movies-inner .swiper .swiper-button-next {
   background: #fff;
   border-radius: 50%;
   width: 40px;
@@ -10,7 +13,10 @@
   position: absolute;
 }
 .popular-movies .popular-movies-inner .swiper .swiper-button-prev::after,
-.popular-movies .popular-movies-inner .swiper .swiper-button-next::after {
+.popular-movies .popular-movies-inner .swiper .swiper-button-next::after, .popular-movies .top-rated-movies-inner .swiper .swiper-button-prev::after,
+.popular-movies .top-rated-movies-inner .swiper .swiper-button-next::after, .top-rated-movies .popular-movies-inner .swiper .swiper-button-prev::after,
+.top-rated-movies .popular-movies-inner .swiper .swiper-button-next::after, .top-rated-movies .top-rated-movies-inner .swiper .swiper-button-prev::after,
+.top-rated-movies .top-rated-movies-inner .swiper .swiper-button-next::after {
   font-size: 16px;
   color: #000;
   font-weight: bold;
