@@ -45,7 +45,9 @@ export default function Crew() {
         </div>
         <div className="mt-14 pb-5 flex justify-between items-center">
           <div>
-            <h1 className="font-bold text-2xl">Crew</h1>
+            <h1 className="font-bold text-2xl">
+              Crew ({movieCreditsCrew.length})
+            </h1>
           </div>
           <nav>
             <Link to={"movie/" + id} className="underline">

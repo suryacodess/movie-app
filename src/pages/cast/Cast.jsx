@@ -46,10 +46,15 @@ export default function Cast() {
         </div>
         <div className="mt-14 pb-5 flex justify-between items-center">
           <div>
-            <h1 className="font-bold text-2xl">Cast</h1>
+            <h1 className="font-bold text-2xl">
+              Cast ({movieCreditsCast.length})
+            </h1>
           </div>
           <nav>
-            <Link to={"movie/" + id} className="underline"> Back</Link>
+            <Link to={"movie/" + id} className="underline">
+              {" "}
+              Back
+            </Link>
           </nav>
         </div>
         <div className="cast grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5 ">
