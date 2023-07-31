@@ -35,7 +35,6 @@ export default function Home() {
     getTopRatedMovies("movie/top_rated")
       .then((result) => {
         setTopRatedMovies(result.results);
-        console.log(result);
       })
       .catch((err) => {
         console.log(err);
@@ -51,7 +50,7 @@ export default function Home() {
         />
       </main>
 
-      {/* popular cards */}
+      {/* popular movie cards */}
       {popularMovies.length === 0 ? (
         <Schimmer />
       ) : (
@@ -105,7 +104,7 @@ export default function Home() {
       )}
       {/* popular cards section ends here */}
 
-      {/* trending cards */}
+      {/* trending movie cards */}
       {topRatedMovies.length === 0 ? (
         <Schimmer />
       ) : (
@@ -157,7 +156,7 @@ export default function Home() {
           </div>
         </section>
       )}
-      {/* trending cards section ends here */}
+      {/* trending movie cards section ends here */}
     </>
   );
 }

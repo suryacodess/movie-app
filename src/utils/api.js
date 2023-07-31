@@ -34,3 +34,11 @@ export const getTopRatedMovies = async (url) => {
   const json = await fetchData.json();
   return json;
 };
+
+export const getVideosById = (url) => {};
+
+export const getRecommandations = async (url) => {
+  const fetchData = await fetch(baseUrl + url, options);
+  const json = await fetchData.json();
+  return json;
+};
