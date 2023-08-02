@@ -71,7 +71,7 @@ export default function MoviePage() {
             <div className="py-5 flex items-center justify-between">
               <div>
                 <h2 className="text-2xl font-bold">
-                  Cast ({movieCreditsCast.length})
+                  Cast ({movieCreditsCast?.length})
                 </h2>
               </div>
               <nav>
@@ -81,7 +81,7 @@ export default function MoviePage() {
               </nav>
             </div>
             <div className="movie-credits w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-5">
-              {movieCreditsCast.slice(0, 12).map((cast) => {
+              {movieCreditsCast?.slice(0, 12).map((cast) => {
                 return (
                   <div
                     className="max-w-[200px] w-full flex flex-col justify-start"
@@ -95,12 +95,12 @@ export default function MoviePage() {
                             ? cast_img + cast?.profile_path
                             : "https://cdn-icons-png.flaticon.com/512/2815/2815428.png"
                         }
-                        alt={cast.name}
+                        alt={cast?.name}
                       />
                     </div>
                     <div className="description text-center">
-                      <p className="font-bold text-sm">{cast.name}</p>
-                      <p className="text-xs">{cast.character}</p>
+                      <p className="font-bold text-sm">{cast?.name}</p>
+                      <p className="text-xs">{cast?.character}</p>
                     </div>
                   </div>
                 );
@@ -112,7 +112,7 @@ export default function MoviePage() {
             <section className="flex justify-between items-center mt-10 py-5">
               <div>
                 <h2 className="text-2xl font-bold">
-                  Crew ({movieCreditsCrew.length})
+                  Crew ({movieCreditsCrew?.length})
                 </h2>
               </div>
               <nav>
@@ -122,7 +122,7 @@ export default function MoviePage() {
               </nav>
             </section>
             <section className="movie-credits w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-5">
-              {movieCreditsCrew.slice(0, 5).map((crew) => {
+              {movieCreditsCrew?.slice(0, 5).map((crew) => {
                 return (
                   <div
                     className="max-w-[200px] w-full flex flex-col justify-start"
@@ -136,7 +136,7 @@ export default function MoviePage() {
                             ? cast_img + crew?.profile_path
                             : "https://cdn-icons-png.flaticon.com/512/2815/2815428.png"
                         }
-                        alt={crew.name}
+                        alt={crew?.name}
                       />
                     </div>
                     <div className="description text-center">

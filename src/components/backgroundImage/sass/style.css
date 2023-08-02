@@ -1,8 +1,0 @@
-.background-image img {
-  background-position: left calc(50vw - 170px - 340px) top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-image: linear-gradient(rgb(219, 14, 14), rgb(237, 75, 75));
-}/*# sourceMappingURL=style.css.map */

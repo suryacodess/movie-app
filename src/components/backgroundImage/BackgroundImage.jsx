@@ -1,5 +1,4 @@
 import React from "react";
-import "./sass/style.css";
 import { backgroubd_poster_url } from "../../utils/constants";
 
 export default function BackgroundImage({ backdrop_path, title }) {

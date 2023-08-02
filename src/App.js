@@ -9,6 +9,9 @@ import Error from "./pages/error/Error";
 import MoviePage from "./pages/moviepage/MoviePage";
 import Cast from "./pages/cast/Cast";
 import Crew from "./pages/crew/Crew";
+import TvShowPage from "./pages/tvShowPage/TvShowPage";
+import TvCast from "./pages/tvcast/TvCast";
+import TvCrew from "./pages/tvcrew/TvCrew";
 
 function App() {
   return (
@@ -27,6 +30,11 @@ function App() {
           <Route path="/crew/:id" element={<Crew />} />
           <Route path="/crew/:id/movie/:id" element={<MoviePage />} />
 
+          <Route path="/tvshow/:id" element={<TvShowPage />} />
+          <Route path="/tvcast/:id" element={<TvCast />} />
+          <Route path="/tvcast/:id/tvshow/:id" element={<TvShowPage />} />
+          <Route path="/tvcrew/:id" element={<TvCrew />} />
+          <Route path="/tvcrew/:id/tvshow/:id" element={<TvShowPage />} />
         </Routes>
       </BrowserRouter>
     </>

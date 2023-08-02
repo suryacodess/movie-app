@@ -23,7 +23,7 @@ export default function MovieCard(props) {
             alt={title}
           />
           <p className="vote-average font-bold text-xs">
-            {vote_average.toString().slice(0, 3)}
+            {vote_average?.toString()?.slice(0, 3)}
           </p>
         </div>
         <div className="description pt-6">

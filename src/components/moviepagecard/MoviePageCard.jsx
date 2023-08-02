@@ -9,7 +9,6 @@ export default function MoviePageCard(props) {
     overview,
     release_date,
     poster_path,
-    genres,
     tagline,
     director,
   } = props;
@@ -30,7 +29,7 @@ export default function MoviePageCard(props) {
           <div className="title">
             <h1 className="font-bold text-2xl lg:text-4xl">{title}</h1>
             <p className="font-bold">{tagline}</p>
-            <p className="">directed by - {director[0].name}</p>
+            <p className="">directed by - {director[0]?.name}</p>
             <p className="text-sm">{releaseData} </p>
           </div>
           <div className="overview max-w-[100%] lg:max-w-[70%] xl:max-w-[80%] w-full py-3">
