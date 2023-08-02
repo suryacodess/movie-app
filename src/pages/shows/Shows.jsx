@@ -39,6 +39,7 @@ export default function Shows() {
   };
 
   useEffect(() => {
+    document.body.scrollTop = "0px";
     getTv();
     getTopRatedTv();
   }, []);

@@ -40,6 +40,7 @@ export default function TvShowPage() {
   useEffect(() => {
     getTvShowById();
     getMoviesCreditsById();
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -47,8 +48,8 @@ export default function TvShowPage() {
       {tvShowDetails.length === 0 ? (
         <SchimmerForMoviePage />
       ) : (
-        <section className="movie-details w-full min-h-96 flex flex-col justify-center items-center px-5 pb-14">
-          <div className="movie-details-inner sm:flex justify-between max-w-[1200px] w-full mx-auto">
+        <section className="movie-details w-full min-h-96 flex flex-col justify-center items-cente ">
+          <div className="movie-details-inner sm:flex justify-between max-w-[1200px] w-full mx-auto px-5 sm:px-0">
             <div className="img max-w-[100%] sm:max-w-[250px] w-full">
               <img
                 className="max-w-[100%] h-[100%] object-cover sm:max-w-[300px] w-full"

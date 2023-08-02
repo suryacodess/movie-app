@@ -44,6 +44,7 @@ export default function MoviePage() {
   useEffect(() => {
     getMoviesById();
     getMoviesCreditsById();
+    window.scrollTo(0, 0);
   }, []);
 
   let director = movieCreditsCrew?.filter((crew) => {
