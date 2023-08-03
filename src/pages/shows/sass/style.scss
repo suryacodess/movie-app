@@ -1,0 +1,22 @@
+.popular-shows, .top-rated-shows {
+    .popular-shows-inner, .top-rated-shows-inner {
+      position: relative;
+      .swiper {
+        .swiper-button-prev,
+        .swiper-button-next {
+          background: #fff;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+  
+          &::after {
+            font-size: 16px;
+            color: #000;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  

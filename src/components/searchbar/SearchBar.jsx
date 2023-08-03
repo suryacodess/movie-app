@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SearchBar() {
   return (
-    <div className="searchbar w-full mt-10">
+    <div className="searchbar w-full">
       <div className="searchbar-inner h-12 flex lg:justify-between max-w-[1200px] w-full mx-auto">
         <input
           type="text"

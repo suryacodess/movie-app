@@ -1,0 +1,23 @@
+.popular-shows .popular-shows-inner, .popular-shows .top-rated-shows-inner, .top-rated-shows .popular-shows-inner, .top-rated-shows .top-rated-shows-inner {
+  position: relative;
+}
+.popular-shows .popular-shows-inner .swiper .swiper-button-prev,
+.popular-shows .popular-shows-inner .swiper .swiper-button-next, .popular-shows .top-rated-shows-inner .swiper .swiper-button-prev,
+.popular-shows .top-rated-shows-inner .swiper .swiper-button-next, .top-rated-shows .popular-shows-inner .swiper .swiper-button-prev,
+.top-rated-shows .popular-shows-inner .swiper .swiper-button-next, .top-rated-shows .top-rated-shows-inner .swiper .swiper-button-prev,
+.top-rated-shows .top-rated-shows-inner .swiper .swiper-button-next {
+  background: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+}
+.popular-shows .popular-shows-inner .swiper .swiper-button-prev::after,
+.popular-shows .popular-shows-inner .swiper .swiper-button-next::after, .popular-shows .top-rated-shows-inner .swiper .swiper-button-prev::after,
+.popular-shows .top-rated-shows-inner .swiper .swiper-button-next::after, .top-rated-shows .popular-shows-inner .swiper .swiper-button-prev::after,
+.top-rated-shows .popular-shows-inner .swiper .swiper-button-next::after, .top-rated-shows .top-rated-shows-inner .swiper .swiper-button-prev::after,
+.top-rated-shows .top-rated-shows-inner .swiper .swiper-button-next::after {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

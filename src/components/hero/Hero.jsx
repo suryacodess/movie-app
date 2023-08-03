@@ -8,7 +8,9 @@ export default function Hero({ title, description }) {
         <h1 className="text-5xl font-bold">{title}</h1>
         <p className="text-xl">{description}</p>
       </div>
-      <SearchBar />
+      <div className="mt-10 w-full">
+        <SearchBar />
+      </div>
     </section>
   );
 }
