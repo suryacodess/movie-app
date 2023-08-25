@@ -101,7 +101,7 @@ export default function MoviePage() {
                     </div>
                     <div className="description text-center">
                       <p className="font-bold text-sm">{cast?.name}</p>
-                      <p className="text-xs">{cast?.character}</p>
+                      <p className="text-xs italic">{cast?.character}</p>
                     </div>
                   </div>
                 );
