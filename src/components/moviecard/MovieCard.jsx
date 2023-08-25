@@ -28,7 +28,6 @@ export default function MovieCard(props) {
         </div>
         <div className="description pt-6">
           <h1 className="text-sm font-bold">{title}</h1>
-          <small>{releaseDate}</small>
         </div>
       </div>
     </Link>

@@ -35,7 +35,6 @@ export const getTopRatedMovies = async (url) => {
   return json;
 };
 
-
 export const getRecommandations = async (url) => {
   const fetchData = await fetch(baseUrl + url, options);
   const json = await fetchData.json();
@@ -49,6 +48,12 @@ export const getTvShows = async (url) => {
 };
 
 export const getTopRatedTvShows = async (url) => {
+  const fetchData = await fetch(baseUrl + url, options);
+  const json = await fetchData.json();
+  return json;
+};
+
+export const getData = async (url) => {
   const fetchData = await fetch(baseUrl + url, options);
   const json = await fetchData.json();
   return json;

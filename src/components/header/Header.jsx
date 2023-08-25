@@ -21,9 +21,6 @@ export default function Header() {
             <li className="list-none ml-5 cursor-pointer">
               <Link to="/people">Poeple</Link>
             </li>
-            <li className="list-none ml-5 cursor-pointer">
-              <Link to="/more">More</Link>
-            </li>
           </ul>
         </nav>
       </div>
